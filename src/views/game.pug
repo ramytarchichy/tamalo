@@ -1,0 +1,52 @@
+extends layout.pug
+
+block variables
+	- title = 'Game'
+
+block head
+	link(rel='stylesheet' href='res/css/game.css')
+
+block content
+
+	.screen#join
+		| Username:
+		input(type='text')#textBoxUsername
+		button(onclick='startGame()') Start Game
+		ul#playerList
+
+	.screen#game
+
+		| Top card: 
+		img(src='/res/images/cards/null.png' alt='null').cardImage#topCard
+
+		ul#players
+			p Loading...
+		button(id='btnDrop' onclick='clickDrop()') Drop Card
+		#controls
+			button(id='btnNext' onclick='nextPlayer()') Next
+			br
+			button(id='btnCallStop' onclick='callStop()') Tamalo!
+			br
+			button(id='btnDraw' onclick='drawCard()') Draw Card
+			br
+			button(id='btnViewSelf' onclick='powerViewSelf()') View Own Card
+			br
+			button(id='btnViewOther' onclick='powerViewOther()') View Other Card
+			br
+			button(id='btnSwapOther' onclick='powerSwapOther()') Swap Cards
+
+	.overlay#drawnCard
+		p You've drawn...
+		br
+		img.cardImage#drawnCardWeight
+		br
+		button(id='btnSwapDrawn' onclick='selectSwapDrawn()') Swap
+		button(id='btnDropDrawn' onclick='dropDrawn()') Drop
+
+	.screen#roundEnd
+		ul#scoreList
+		button(onclick='startGame()') Next Round
+
+	script(src='/socket.io/socket.io.js')
+	script(src='res/scripts/he.js')
+	script(src='res/scripts/client.js')

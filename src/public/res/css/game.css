@@ -1,0 +1,103 @@
+body
+{
+    color: #FFF;
+    background-color: rgb(43, 33, 70);
+}
+
+.screen
+{
+    display: none;
+}
+
+.overlay
+{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+
+
+#actionLog
+{
+    position: fixed;
+    text-align: left;
+    overflow-y: scroll;
+}
+
+#actionLog li
+{
+    background: #aaa;
+    font-family: monospace;
+}
+
+.cardImage
+{
+    height: 140px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+#drawnCard
+{
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#drawnCard button
+{
+    background-color: #0F0;
+    border-radius: 8px;
+    width: 100px;
+}
+
+#controls button
+{
+    width: 180px;
+}
+
+.card
+{
+    border-radius: 8px;
+    padding: 0 0;
+    background-color: #fff;
+    align-content: center;
+}
+
+
+.card:disabled
+{
+    
+}
+
+
+#players
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+li#self
+{
+    background: #99E;
+}
+
+li#current
+{
+    background: #3A3;
+}
+
+li#stop
+{
+    background: #F70;
+}

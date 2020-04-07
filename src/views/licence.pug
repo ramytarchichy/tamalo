@@ -1,0 +1,35 @@
+extends layout.pug
+
+block variables
+	- title = 'Licence'
+
+block head
+	link(rel='stylesheet' href='res/css/licence.css')
+
+block content
+	h1 Licence
+	img(src='res/images/eu.svg' alt='EU Flag')#eu-flag
+	| This website is licensed under the 
+	a(href='res/text/licenses/tamalo.txt') European Union Public Licence (EUPL) v1.2
+	| . Source code is available on 
+	a(href='https://github.com/OverclockedSanic/tamalo') GitHub
+	| .
+	
+	h1 Third-Party Licences
+
+	ul
+		li
+			a(href='res/text/licenses/nodejs.txt') Node.js
+		li
+			a(href='res/text/licenses/base64url.txt') base64url
+		li
+			a(href='res/text/licenses/express.txt') Express
+		li
+			a(href='res/text/licenses/he.txt') he
+		li
+			a(href='res/text/licenses/helmet.txt') Helmet
+		li
+			a(href='res/text/licenses/pug.txt') Pug
+		li
+			a(href='res/text/licenses/socketio.txt') Socket.IO
+
